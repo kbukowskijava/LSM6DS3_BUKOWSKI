@@ -17,7 +17,7 @@
 
 //zdefiniowanie rejestrów potrzebnych do poprawnej konfiguracji i identyfikacji
 #define BUKOWSKI_WHO_AM_I_REG 0x0F // tylko odczyt (wartość: 69h) - sprawdzenie działania urządzenia
-#define BUKOWSKI_SLAVE_ADDRESS 110101xb
+#define BUKOWSKI_SLAVE_ADDRESS  1101011b
 //ustawianie parametrów pracy
 #define BUKOWSKI_CTRL1_XL     0X10
 #define BUKOWSKI_CTRL2_G      0X11
@@ -25,16 +25,14 @@
 #define BUKOWSKI_CTRL6_C      0X15
 #define BUKOWSKI_CTRL7_G      0X16
 #define BUKOWSKI_CTRL8_XL     0X17
+//zdefiniowanie trybu pracy I2C, podciągnięcie pinu 12 do poziomu wysokiego
 
-LSM6DS3_BUKOWSKI::LSM6DS3_BUKOWSKI(TwoWire& wire, uint8_t slave){
-    _slave_(slaveAddress);
-    _wire_(&wire);
-}
 int LSM6DS3_BUKOWSKI::begin(){
-
+    _wire_ -> begin(BUKOWSKI_SLAVE_ADDRESS);
+    writeRegister
 }
 
 if(readRegister(BUKOWSKI_WHO_AM_I_REG !=0x69)){
-    end();
+    //co ma sie dziac jak urzadzenie sie nie komunikuje - zakonczyc polaczenie
     return 0;
 }
