@@ -1,6 +1,5 @@
 #include <Arduino.h>
 #include <Wire.h>
-#include <SPI.h>
 
 class LSM6DS3_BUKOWSKI{
     private:
