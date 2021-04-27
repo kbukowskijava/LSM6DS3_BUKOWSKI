@@ -18,7 +18,7 @@
 //zdefiniowanie rejestrów potrzebnych do poprawnej konfiguracji i identyfikacji
 #define BUKOWSKI_WHO_AM_I_REG 0x0F // tylko odczyt (wartość: 69h) - sprawdzenie działania urządzenia
 #define BUKOWSKI_SLAVE_ADDRESS 110101xb
-
+//ustawianie parametrów pracy
 #define BUKOWSKI_CTRL1_XL     0X10
 #define BUKOWSKI_CTRL2_G      0X11
 #define BUKOWSKI_STATUS_REG   0X1E
