@@ -3,17 +3,17 @@
 
 #include <Arduino.h>
 #include <Wire.h>
-
+// do naprawienia klasa
 class LSM6DS3_BUKOWSKI{
     private:
-        uint8_t _slave_;
-        TwoWire* _wire_;
+        uint8_t _slave;
+        TwoWire* _wire;
         int czytaj_rejestr(uint8_t address);
         int czytaj_rejestry(uint8_t address, uint8_t* dane, size_t dlugosc);
         int wpisz_rejestr(uint8_t address, uint8_t dane);
         
     public:
-        LSM6DS3_BUKOWSKI(TwoWire& wire, uint8_t slave);
+        LSM6DS3_BUKOWSKI(uint8_t address);
         int begin();
         int end();
         //obsługa żyroskopu
