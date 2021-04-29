@@ -4,9 +4,9 @@
 #include <Arduino.h>
 #include <Wire.h>
 // do naprawienia klasa
-class LSM6DS3_BUKOWSKI{
+class LSM6DS3_BUKOWSKIClass {
     public:
-        LSM6DS3_BUKOWSKI();
+        LSM6DS3_BUKOWSKIClass();
         int begin();
         // void end();
         // //obsługa żyroskopu
