@@ -3,10 +3,16 @@
 #include <Wire.h>
 #include <HardwareSerial.h>
 
-void setup() 
+void setup(){ 
   Wire.begin();
   Serial.begin(9600);
 }
 void loop() {
-  if (LSM6DS3_BUKOWSKI.begin())
+  if(SENSOR.begin() == 1){
+    Serial.print("DZIALA");
+  }
+  else
+  {
+    Serial.print("FAIL");
+  }
 }

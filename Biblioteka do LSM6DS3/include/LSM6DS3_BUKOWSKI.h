@@ -1,6 +1,3 @@
-#ifndef LSM6DS3_BUKOWSKI
-#define LSM6DS3_BUKOWSKI
-
 #include <Arduino.h>
 #include <Wire.h>
 // do naprawienia klasa
@@ -21,4 +18,5 @@ class LSM6DS3_BUKOWSKIClass {
         int czytaj_rejestr(uint8_t address);
         int wpisz_rejestr(uint8_t address, uint8_t dane);
 };
-#endif
+
+extern LSM6DS3_BUKOWSKIClass SENSOR;

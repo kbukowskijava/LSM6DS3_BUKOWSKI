@@ -33,6 +33,10 @@ LSM6DS3_BUKOWSKIClass::LSM6DS3_BUKOWSKIClass(){
 int LSM6DS3_BUKOWSKIClass::begin(){
   Wire.begin();
   if (czytaj_rejestr(BUKOWSKI_WHO_AM_I) != 0x69) {
+    return 1;
+  }
+  else
+  {
     return 0;
   }
 }
