@@ -3,7 +3,6 @@
 #include <Wire.h>
 #include <HardwareSerial.h>
 
-LSM6DS3_BUKOWSKIClass SENSOR;
 void setup(){ 
   Wire.begin();
   Serial.begin(9600);
