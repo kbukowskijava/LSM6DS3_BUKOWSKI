@@ -30,16 +30,43 @@
 LSM6DS3_BUKOWSKIClass::LSM6DS3_BUKOWSKIClass(){
 }
 
+LSM6DS3_BUKOWSKIClass::~LSM6DS3_BUKOWSKIClass()
+{
+}
+
 int LSM6DS3_BUKOWSKIClass::begin(){
-  Wire.begin();
   if (czytaj_rejestr(BUKOWSKI_WHO_AM_I) != 0x69) {
-    return 1;
+    end();
+    return 0;
   }
   else
   {
-    return 0;
+  wpisz_rejestr(BUKOWSKI_CTRL2_G, 0x4C);
+
+  wpisz_rejestr(BUKOWSKI_CTRL1_XL, 0x4A);
+
+  wpisz_rejestr(BUKOWSKI_CTRL7_G, 0x00);
+
+  wpisz_rejestr(BUKOWSKI_CTRL8_XL, 0x09);
+
+  return 1;
   }
 }
+
+void LSM6DS3_BUKOWSKIClass::end(){
+    wpisz_rejestr(BUKOWSKI_CTRL2_G, 0x00);
+    wpisz_rejestr(BUKOWSKI_CTRL1_XL, 0x00);
+    Wire.end();
+}
+
+int LSM6DS3_BUKOWSKIClass::czy_aktywny_G()
+{
+  if (czytaj_rejestr(BUKOWSKI_STATUS_REG) & 0x02) {
+    return 1;
+  }
+  return 0;
+}
+
 int LSM6DS3_BUKOWSKIClass::czytaj_rejestr(uint8_t address){
   int value;
   Wire.beginTransmission(BUKOWSKI_SLAVE_ADDRESS);
@@ -62,3 +89,4 @@ int LSM6DS3_BUKOWSKIClass::wpisz_rejestr(uint8_t address, uint8_t dane)
     }
   return 1;
 }
+

@@ -1,15 +1,19 @@
+#ifndef LSM6DS3_BUKOWSKI_h
+#define LSM6DS3_BUKOWSKI_h
+
 #include <Arduino.h>
 #include <Wire.h>
 // do naprawienia klasa
 class LSM6DS3_BUKOWSKIClass {
     public:
         LSM6DS3_BUKOWSKIClass();
+        ~LSM6DS3_BUKOWSKIClass();
         int begin();
-        // void end();
+        void end();
         // //obsługa żyroskopu
         // int czytaj_G(float& x, float& y, float& z);
         // int freq_G();
-        // int czy_aktywny_G();
+        int czy_aktywny_G();
         // //obsługa akcelerometru
         // int czytaj_A(float& x, float& y, float& z);
         // float freq_A();
@@ -19,4 +23,4 @@ class LSM6DS3_BUKOWSKIClass {
         int wpisz_rejestr(uint8_t address, uint8_t dane);
 };
 
-extern LSM6DS3_BUKOWSKIClass SENSOR;
+#endif

@@ -3,16 +3,13 @@
 #include <Wire.h>
 #include <HardwareSerial.h>
 
+LSM6DS3_BUKOWSKIClass SENSOR;
 void setup(){ 
   Wire.begin();
   Serial.begin(9600);
 }
 void loop() {
-  if(SENSOR.begin() == 1){
-    Serial.print("DZIALA");
-  }
-  else
-  {
-    Serial.print("FAIL");
-  }
+  SENSOR.begin();
+  Serial.print (SENSOR.czy_aktywny_G());
+  SENSOR.end();
 }
