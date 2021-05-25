@@ -14,3 +14,19 @@ Biblioteka jest przeznaczona tylko i wyłącznie dla płytki Arduino NANO 33 IoT
 ###Jak dołączyć bibliotekę do projektu :question:
 
 Dla Arduino IDE:
+
+Dla dodatku PlatformIO do programu Visual Studio Code:
+- należy umieścić pliki LSM6DS3.h oraz LSM6DS3.cpp w katalogu /lib/src projektu
+- wymagana jest modyfikacja pliku platformio.ini
+
+Przykładowy plik platformio.ini:
+```
+[env:nano_33_iot]
+platform = atmelsam
+board = nano_33_iot
+framework = arduino
+
+lib_deps = D:\LSM6DS3_BUKOWSKI\Biblioteka do LSM6DS3\lib\src
+```
+
+Najważniejsze, poza dodaniem odpowiednich parametrów konfiguracji, jest umieszczenie stosownej ścieżki do plików LSM6DS3.h oraz LSM6DS3.cpp. Dopiero wtedy dodatek PlatformIO nie będzie zgłaszał błędu dostępu do pliku nagłówkowego.
