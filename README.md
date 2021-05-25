@@ -5,6 +5,6 @@ Autor: Kacper Bukowski
 Grupa: WEL18EC1S1
 Nr_albumu: 71968
 Rozpoczęcie pracy nad projektem: 27.04.2021r.
-Zakończenie pracy nad projektem: NULL
+Zakończenie pracy nad projektem: 25.05.2021r.
 
 #Notatki
