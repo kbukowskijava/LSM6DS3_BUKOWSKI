@@ -7,12 +7,12 @@
 class LSM6DS3_BUKOWSKIClass {
     public:
         LSM6DS3_BUKOWSKIClass();
-        int begin();
-        void end();
+        int begin(); //uruchomienie i ustawienie odpowiednich rejestrów do poprawnej pracy
+        void end(); // zakończenie działania układu
         //obsługa żyroskopu
-        int czytaj_G_X();
-        int czytaj_G_Y();
-        int czytaj_G_Z();
+        int czytaj_G_X(); // odczyt danych żyroskopu w osi X
+        int czytaj_G_Y(); // odczyt danych żyroskopu w osi Y
+        int czytaj_G_Z(); // odczyt danych żyroskopu w osi Z
         int freq_G();
         int czy_aktywny_G();
         //obsługa akcelerometru
