@@ -6,17 +6,17 @@ Nr_albumu: 71968
 Rozpoczęcie pracy nad projektem: 27.04.2021r.
 Zakończenie pracy nad projektem: 25.05.2021r.
 
-##Dokumentacja biblioteki
+## Dokumentacja biblioteki
 
-###Opis biblioteki 
+### Opis biblioteki 
 Biblioteka jest przeznaczona tylko i wyłącznie dla płytki Arduino NANO 33 IoT. Przystosowana jest do połączeń poprzez interfejs komunikacyjny I2C. Z racji tego, iż piny wymagane do komunikacji poprzez interfejs SPI zostały fizycznie podłączone do masy, biblioteka nie posiada obsługi tego standardu. 
 
-###Jak dołączyć bibliotekę do projektu :question:
+### Jak dołączyć bibliotekę do projektu :question:
 
-Dla Arduino IDE:
+###### Dla Arduino IDE:
 Wystarczy umieścić pliki LSM6DS3.h oraz LSM6DS3.cpp w katalogu bibliotek. Dodatkowe informacje można znaleźć pod linkiem: https://www.arduino.cc/en/hacking/libraries
 
-Dla dodatku PlatformIO do programu Visual Studio Code:
+###### Dla dodatku PlatformIO do programu Visual Studio Code:
 - należy umieścić pliki LSM6DS3.h oraz LSM6DS3.cpp w katalogu /lib/src projektu
 - wymagana jest modyfikacja pliku platformio.ini
 
@@ -37,7 +37,7 @@ W pliku main.cpp należy dołączyć bibliotekę poprzez umieszczenie w kodzie l
 #include <BUKOWSKI_LSM6DS3.h>
 ```
 
-###Przykład zastosowania biblioteki:
+### Przykład zastosowania biblioteki:
 Przykład jest dostępny w pliku main.cpp tego repozytorium. 
 
 ```
