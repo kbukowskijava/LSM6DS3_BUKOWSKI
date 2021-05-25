@@ -40,7 +40,7 @@ void loop() {
         Serial.print(" Y = ");
         Serial.print(SENSOR.czytaj_G_Y());
         Serial.print(" Z = ");
-        Serial.println("SENSOR.czytaj_G_Z()");
+        Serial.println(SENSOR.czytaj_G_Z());
         delay(how_slow);
         break;
       default:
