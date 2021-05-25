@@ -1,5 +1,4 @@
 # Biblioteka do obsługi układu LSM6DS3
-Biblioteka do obsługi układu LSM6DS3 poprzez interfejs komunikacyjny I2C na płytce Arduino NANO 33 iot
 
 Autor: Kacper Bukowski
 Grupa: WEL18EC1S1
@@ -7,4 +6,13 @@ Nr_albumu: 71968
 Rozpoczęcie pracy nad projektem: 27.04.2021r.
 Zakończenie pracy nad projektem: 25.05.2021r.
 
-#Notatki
+##Dokumentacja biblioteki
+
+###Opis biblioteki
+Biblioteka jest przeznaczona tylko i wyłącznie dla płytki Arduino NANO 33 IoT. Przystosowana jest do połączeń poprzez interfejs komunikacyjny I2C. Z racji tego, iż piny wymagane do komunikacji poprzez interfejs SPI zostały fizycznie podłączone do masy, biblioteka nie posiada obsługi tego standardu. 
+
+###Jak dołączyć bibliotekę do projektu :smiley:
+
+
+
+Dla Arduino IDE:
