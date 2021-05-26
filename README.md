@@ -107,7 +107,8 @@ void loop() {
 
 ### Opis funkcji biblioteki
 
--int begin()        //uruchomienie i ustawienie odpowiednich rejestrów do poprawnej pracy
+###### int begin()        
+uruchomienie i ustawienie odpowiednich rejestrów do poprawnej pracy
 -void end()         // zakończenie działania układu
 -int czytaj_G_X()   // odczyt danych żyroskopu w osi X
 -int czytaj_G_Y()   // odczyt danych żyroskopu w osi Y
