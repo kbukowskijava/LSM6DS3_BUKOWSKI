@@ -38,7 +38,13 @@ W pliku main.cpp należy dołączyć bibliotekę poprzez umieszczenie w kodzie l
 ```
 
 ### Przykład zastosowania biblioteki:
-Przykład jest dostępny w pliku main.cpp tego repozytorium. 
+Przykład jest dostępny w pliku main.cpp tego repozytorium. Umożliwia wypisywanie koordynatów x,y,z poprzez port szeregowy obsługiwany przy użyciu biblioteki HardwareSerial.h. Komunikacja poprzez szeregową, dwukierunkową magistrale I2C służącą do przesyłania danych w urządzeniach elektronicznych. Obsługa magistrali realizowana jest poprzez bibliotekę WIRE.h.
+
+Istnieje możliwość dostosowania standardowych parametrów pracy:
+- czas trwania przerwy między odczytami (ms)
+- wybór pomiędzy pracą akcelerometru lub żyroskopu (0 - akcelerometr , 1 - żyroskop). Podanie innej wartości będzie skutkowało wypisywaniem monitu na porcie szeregowym o zmianę parametrów projektu
+
+Przed uruchomieniem układu należy utworzyć obiekt klasy LSM6DS3_BUKOWSKIClass. W przykładzie został stworzony obiekt SENSOR. Po nawiązaniu poprawnej komunikacji zostanie przekazany przez port szeregowy komunikat "Gotowy!", a następnie po poprawnej konfiguracji rozpocznie się zwracanie wartości.
 
 ```
 #include <Arduino.h>
@@ -55,12 +61,12 @@ void setup(){
   Wire.begin();
   Serial.begin(9600);
   if(SENSOR.begin() == 1){
-    Serial.println("Ready!");
+    Serial.println("Gotowy!");
     ready_to_rock = true;
   }
   else
   {
-    Serial.println("Failed to initialize LSM6DS3 sensor");
+    Serial.println("Wystapil problem podczas uruchomienia sensora LSM6DS3");
     ready_to_rock = false;
   }
 }
@@ -98,3 +104,18 @@ void loop() {
   } 
 }
 ```
+
+### Opis funkcji biblioteki
+
+int begin();        //uruchomienie i ustawienie odpowiednich rejestrów do poprawnej pracy
+void end();         // zakończenie działania układu
+int czytaj_G_X();   // odczyt danych żyroskopu w osi X
+int czytaj_G_Y();   // odczyt danych żyroskopu w osi Y
+int czytaj_G_Z();   // odczyt danych żyroskopu w osi Z
+int freq_G();       // odczyt częstotliwości pracy żyroskopu
+int czy_aktywny_G();// sprawdzenie aktywności żyroskopu (1 - dane są przekazywane, 0 - żyroskop nieaktywny)
+int czytaj_A_X();   // odczyt danych akcelerometru w osi X
+int czytaj_A_Y();   // odczyt danych akcelerometru w osi Y
+int czytaj_A_Z();   // odczyt danych akcelerometru w osi Z
+float freq_A();     // odczyt częstotliwości pracy akcelerometru
+int czy_aktywny_A();// sprawdzenie aktywności akcelerometru (1 - dane są przekazywane, 0 - żyroskop nieaktywny)
