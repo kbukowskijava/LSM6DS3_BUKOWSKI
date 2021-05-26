@@ -107,15 +107,15 @@ void loop() {
 
 ### Opis funkcji biblioteki
 
--int begin();        //uruchomienie i ustawienie odpowiednich rejestrów do poprawnej pracy
--void end();         // zakończenie działania układu
--int czytaj_G_X();   // odczyt danych żyroskopu w osi X
--int czytaj_G_Y();   // odczyt danych żyroskopu w osi Y
--int czytaj_G_Z();   // odczyt danych żyroskopu w osi Z
--int freq_G();       // odczyt częstotliwości pracy żyroskopu
--int czy_aktywny_G();// sprawdzenie aktywności żyroskopu (1 - dane są przekazywane, 0 - żyroskop nieaktywny)
--int czytaj_A_X();   // odczyt danych akcelerometru w osi X
--int czytaj_A_Y();   // odczyt danych akcelerometru w osi Y
--int czytaj_A_Z();   // odczyt danych akcelerometru w osi Z
--float freq_A();     // odczyt częstotliwości pracy akcelerometru
--int czy_aktywny_A();// sprawdzenie aktywności akcelerometru (1 - dane są przekazywane, 0 - żyroskop nieaktywny)
+-int begin()        //uruchomienie i ustawienie odpowiednich rejestrów do poprawnej pracy
+-void end()         // zakończenie działania układu
+-int czytaj_G_X()   // odczyt danych żyroskopu w osi X
+-int czytaj_G_Y()   // odczyt danych żyroskopu w osi Y
+-int czytaj_G_Z()   // odczyt danych żyroskopu w osi Z
+-int freq_G()       // odczyt częstotliwości pracy żyroskopu
+-int czy_aktywny_G()// sprawdzenie aktywności żyroskopu (1 - dane są przekazywane, 0 - żyroskop nieaktywny)
+-int czytaj_A_X()   // odczyt danych akcelerometru w osi X
+-int czytaj_A_Y()   // odczyt danych akcelerometru w osi Y
+-int czytaj_A_Z()   // odczyt danych akcelerometru w osi Z
+-float freq_A()     // odczyt częstotliwości pracy akcelerometru
+-int czy_aktywny_A()// sprawdzenie aktywności akcelerometru (1 - dane są przekazywane, 0 - żyroskop nieaktywny)
