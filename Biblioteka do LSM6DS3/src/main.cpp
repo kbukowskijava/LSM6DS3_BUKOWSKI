@@ -12,12 +12,12 @@ void setup(){
   Wire.begin();
   Serial.begin(9600);
   if(SENSOR.begin() == 1){
-    Serial.println("Ready!");
+    Serial.println("Gotowy!");
     ready_to_rock = true;
   }
   else
   {
-    Serial.println("Failed to initialize LSM6DS3 sensor");
+    Serial.println("Wystapil problem podczas uruchomienia sensora LSM6DS3");
     ready_to_rock = false;
   }
 }
