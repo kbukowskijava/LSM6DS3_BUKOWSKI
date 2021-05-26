@@ -3,6 +3,8 @@
 #include <Wire.h>
 #include <HardwareSerial.h>
 
+//link do repozytorium: https://github.com/kbukowskijava/LSM6DS3_BUKOWSKI.git
+
 LSM6DS3_BUKOWSKIClass SENSOR;
 bool ready_to_rock; // zmienna pomocnicza sprawdzająca poprawność działania układu
 int how_slow = 500; // przerwa między odczytami
