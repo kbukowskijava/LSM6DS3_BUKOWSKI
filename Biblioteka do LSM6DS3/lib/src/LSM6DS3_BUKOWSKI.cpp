@@ -1,3 +1,12 @@
+/****************************************************************
+ * @author: Kacper Bukowski
+ * @email:  kacper.bukowski@student.wat.edu.pl
+ * @file:   LSM6DS3_BUKOWSKI.cpp
+ * @brief:  Biblioteka do obsługi układu LSM6DS3
+ * 
+****************************************************************/
+
+
 #include "LSM6DS3_BUKOWSKI.h"
 #include <Wire.h>
 // zdefiniowanie rejestrów wyjścia żyroskopu

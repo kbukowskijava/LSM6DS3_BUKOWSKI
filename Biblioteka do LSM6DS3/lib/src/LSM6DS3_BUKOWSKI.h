@@ -1,3 +1,13 @@
+/****************************************************************
+ * @author: Kacper Bukowski
+ * @email:  kacper.bukowski@student.wat.edu.pl
+ * @file:   LSM6DS3_BUKOWSKI.h
+ * @brief:  Plik nagłówkowy biblioteki do obsługi układu LSM6DS3
+ * 
+****************************************************************/
+
+
+
 #ifndef LSM6DS3_BUKOWSKI_h
 #define LSM6DS3_BUKOWSKI_h
 

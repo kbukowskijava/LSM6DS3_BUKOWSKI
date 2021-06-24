@@ -1,3 +1,13 @@
+/****************************************************************
+ * @author: Kacper Bukowski
+ * @email:  kacper.bukowski@student.wat.edu.pl
+ * @file:   main.cpp 
+ * @brief:  Plik z funkcją główną main.
+ *          Przykładowy projekt implementacji biblioteki.
+ * 
+****************************************************************/
+
+
 #include <Arduino.h>
 #include "LSM6DS3_BUKOWSKI.h"
 #include <Wire.h>
